@@ -5,24 +5,65 @@ from tkinter import ttk
 root = Tk()
 root.title("Death Counter")
 
-message = Label(
-    text="How many times have you died?",
-    width=30,
-    height=1
-)
 
-deathInput = Entry(
-    width=30
-)
+def start():
+    Label(
+        text="Welcome to the Death Counter!\nClick the button to start counting!",
+        justify=CENTER,
+        font=("Times New Roman", 12),
+        fg="white",
+        bg="black",
+        height=10,
+        width=30
+    ).pack()
 
-submitButt = Button(
-    text="Calculate",
-    bg="blue",
-    fg="white"
-)
+    Button(
+        text="Start",
+        font=("Times New Roman", 12),
+        fg="white",
+        bg="black",
+        width=29,
+        command="mainScreen"
+    ).pack()
 
-message.pack()
-deathInput.pack()
-submitButt.pack()
 
+def mainScreen():
+    Button().destroy()
+
+
+def config():
+    startMsg = Label(
+        text="Welcome to the Death Counter!\nClick the button to start counting!",
+        justify=CENTER,
+        font=("Times New Roman", 12),
+        fg="white",
+        bg="black",
+        height=10,
+        width=30
+    )
+
+
+def add():
+    message = Label(
+        text="How many times have you died?",
+        width=30,
+        height=1
+    )
+
+    deathInput = Entry(
+        width=30
+    )
+
+    submitButt = Button(
+        text="Calculate",
+        bg="blue",
+        fg="white"
+    )
+
+    message.pack()
+    deathInput.pack()
+    submitButt.pack()
+
+
+start()
 root.mainloop()
